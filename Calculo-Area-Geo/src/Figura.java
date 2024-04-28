@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 /**
  *
@@ -12,14 +12,15 @@ abstract class Figura {
 
 
     public void LerAlturaBase(){
-        String StrAlt = JOptionPane.showInputDialog("Informe a altura: ");
-
-        altura = Integer.parseInt(StrAlt);
-        String Strbase = JOptionPane.showInputDialog("Informe a base: ");
-        base = Integer.parseInt(Strbase);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Informe a altura: ");
+        altura = scan.nextInt();
+        System.out.println("Informe a base: ");
+        base = scan.nextInt();
+    scan.close();
     }
 
     public void MostrarArea(){
-    JOptionPane.showMessageDialog(null,"Area Total: " + area);
+    System.out.println("Area Total: " + area);
     }
 }
